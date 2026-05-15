@@ -46,17 +46,7 @@ public class Dealership
     public ArrayList<Vehicle> getVehiclesByMakeModel(String make, String model)
     {
 
-//        ArrayList<Vehicle> vehicles = new ArrayList<>();
-//
-//        for (Vehicle v : inventory)
-//        {
-//            if(v.getMake().equalsIgnoreCase(make) && v.getModel().equalsIgnoreCase(model))
-//            {
-//                vehicles.add(v);
-//            }
-//        }
-//
-//        return vehicles;
+
 
         // streams allow us to replace lines 49-59
         return inventory.stream()
