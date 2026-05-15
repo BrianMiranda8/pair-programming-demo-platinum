@@ -73,7 +73,17 @@ public class DealershipApplication
 
     private void searchByYear()
     {
-        UserInterface.displayMessage("search by year");
+        // get min and max year from user
+        UserInterface.displayMessage("\nSearch by year");
+        UserInterface.displayMessage("--------------------------");
+        int minYear = UserInterface.getUserInputInt("Minimum Year: ");
+        int maxYear = UserInterface.getUserInputInt("Maximum Year: ");
+
+        // search for vehicle by year
+        ArrayList<Vehicle> vehicles = dealership.getVehiclesByYear(minYear, maxYear);
+
+        // display the vehicles
+        UserInterface.displayVehicles(vehicles);
     }
 
     private void searchByColor()
